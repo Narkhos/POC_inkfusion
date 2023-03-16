@@ -8,7 +8,10 @@ function endsWith( $haystack, $needle ) {
     return substr( $haystack, -$length ) === $needle;
 }
 
-$resultingStory = "->MainMenu\n=== MainMenu\n";
+$resultingStory = <<<INK
+	->MainMenu
+	=== MainMenu\n
+INK;
 $header = "";
 
 $stories = [];
@@ -22,7 +25,7 @@ for($i=0;$i<count($files);$i++) {
 }
 
 foreach($stories as $key => $story) {
-	$stories[$key] = preg_replace('/->[\s+]*END/',"-> MainMenu",$stories[$key]);
+	$stories[$key] = preg_replace('/->[\s+]*END/',"# REINIT:\n-> MainMenu",$stories[$key]);
 
 	$knotName=str_replace(" ", "", $key)."Story";
 

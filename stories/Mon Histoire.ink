@@ -2,11 +2,11 @@ VAR ONE_indice = false
 
 Vous voyez un bel indice.
 
-+ {TWO_variable} J'ai déjà joué à l'autre jeu
+* {TWO_variable} J'ai déjà joué à l'autre jeu
 ->END
-+ Ramasser l'indice
+* Ramasser l'indice
 ~ONE_indice=true
-+ Laisser l'indice
+* Laisser l'indice
 
 -
 Qui est le coupable ?

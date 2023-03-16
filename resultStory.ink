@@ -1,5 +1,5 @@
-->MainMenu
-=== MainMenu
+	->MainMenu
+	=== MainMenu
 + Mon Histoire ->MonHistoireStory
 + Super Histoire ->SuperHistoireStory
 === MonHistoireStory
@@ -7,11 +7,12 @@ VAR ONE_indice = false
 
 Vous voyez un bel indice.
 
-+ {TWO_variable} J'ai déjà joué à l'autre jeu
+* {TWO_variable} J'ai déjà joué à l'autre jeu
+# REINIT:
 -> MainMenu
-+ Ramasser l'indice
+* Ramasser l'indice
 ~ONE_indice=true
-+ Laisser l'indice
+* Laisser l'indice
 
 -
 Qui est le coupable ?
@@ -31,7 +32,8 @@ Qui est le coupable ?
 -
 Ainsi s'achève les aventures de l'indice à ramasser.
 
-    -> MainMenu
+    # REINIT:
+-> MainMenu
 
 === SuperHistoireStory
 VAR TWO_variable = false
@@ -41,4 +43,5 @@ Mais attendez, je ne l'ai pas déjà faite cette histoire ?
 === TWO_indice
 ~ TWO_variable = true
 Il y avait une histoire d'indice, mais là je ne le trouve plus.
+# REINIT:
 -> MainMenu
